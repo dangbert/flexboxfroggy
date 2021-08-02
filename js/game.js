@@ -1,3 +1,9 @@
+function toggleHint() {
+  console.log('in toggleHint');
+  $("#instructions").toggleClass('hidden');
+}
+
+
 var game = {
   colorblind: (localStorage.colorblind && JSON.parse(localStorage.colorblind)) || 'false',
   language: window.location.hash.substring(1) || 'en',
