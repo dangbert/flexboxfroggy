@@ -287,7 +287,8 @@ var game = {
 
     this.loadDocs();
 
-    var lines = Object.keys(level.style).length;
+    // always use same number of lines to make problems a bit harder
+    var lines = Math.max(Object.keys(level.style).length, 5);
     $('#code').height(20 * lines).data("lines", lines);
 
     var string = level.board;
